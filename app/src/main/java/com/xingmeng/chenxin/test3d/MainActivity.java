@@ -1,17 +1,14 @@
 package com.xingmeng.chenxin.test3d;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
 
-import java.util.logging.Handler;
+import com.xingmeng.chenxin.my3drotateview.My3dRotateView;
 
 public class MainActivity extends AppCompatActivity {
-    My3dView my3dView;
+    My3dRotateView my3dView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        my3dView = (My3dView) findViewById(R.id.mView);
-        my3dView.setItemClickListener(new My3dView.OnItemClickListener() {
+        my3dView = (My3dRotateView) findViewById(R.id.mView);
+        my3dView.setItemClickListener(new My3dRotateView.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position, boolean isFirst) {
                 Log.e("infoo","onItemClick position = "+position);
             }
         });
-        my3dView.setInterpolate(new My3dView.My3dInterpolate() {
+        my3dView.setInterpolate(new My3dRotateView.My3dInterpolate() {
             @Override
             public double getInterpolation(float timing) {
                 return 2;

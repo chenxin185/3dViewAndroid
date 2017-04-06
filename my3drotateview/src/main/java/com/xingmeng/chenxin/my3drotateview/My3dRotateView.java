@@ -1,4 +1,4 @@
-package com.xingmeng.chenxin.test3d;
+package com.xingmeng.chenxin.my3drotateview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -20,7 +20,7 @@ import android.view.ViewGroup;
  * 通过判断是顺时针还是逆时针来动态改变角度数组里的值，然后在invalidate()。
  */
 
-public class My3dView extends ViewGroup implements View.OnTouchListener, GestureDetector.OnGestureListener {
+public class My3dRotateView extends ViewGroup implements View.OnTouchListener, GestureDetector.OnGestureListener {
 
     public static final String TAG = "My3DView";
 
@@ -71,15 +71,15 @@ public class My3dView extends ViewGroup implements View.OnTouchListener, Gesture
     };
 
 
-    public My3dView(Context context) {
+    public My3dRotateView(Context context) {
         this(context, null);
     }
 
-    public My3dView(Context context, AttributeSet attrs) {
+    public My3dRotateView(Context context, AttributeSet attrs) {
         this(context, attrs, -1);
     }
 
-    public My3dView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public My3dRotateView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }

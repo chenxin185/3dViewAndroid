@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.xingmeng.chenxin.test3d.MainActivity">
 
-    <com.xingmeng.chenxin.test3d.My3dView
+    <com.xingmeng.chenxin.my3drotateview.My3dRotateView
         app:childHeight="30dp"
         app:childWidth="30dp"
         app:ovalWidth="300dp"
@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/img5" />
 
-    </com.xingmeng.chenxin.test3d.My3dView>
+    </com.xingmeng.chenxin.my3drotateview.My3dRotateView>
 
     <Button
         android:id="@+id/btn"
