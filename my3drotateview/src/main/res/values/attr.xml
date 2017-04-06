@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="My3dView">
+
+    <declare-styleable name="My3dRotateView">
         <attr name="childHeight" format="dimension"/>
         <attr name="childWidth" format="dimension"/>
         <attr name="ovalHeight" format="dimension"/>
