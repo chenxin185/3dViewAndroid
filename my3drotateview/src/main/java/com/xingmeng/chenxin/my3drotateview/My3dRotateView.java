@@ -94,6 +94,7 @@ public class My3dRotateView extends ViewGroup implements View.OnTouchListener, G
         mOvalWidth = (int) a.getDimension(R.styleable.My3dRotateView_ovalWidth, -1);
         mOvalHeight = (int) a.getDimension(R.styleable.My3dRotateView_ovalHeight, -1);
         a.recycle();
+
     }
 
     @Override
