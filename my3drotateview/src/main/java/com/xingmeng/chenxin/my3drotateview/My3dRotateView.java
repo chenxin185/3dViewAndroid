@@ -88,11 +88,11 @@ public class My3dRotateView extends ViewGroup implements View.OnTouchListener, G
         setWillNotDraw(false);
         setPersistentDrawingCache(PERSISTENT_NO_CACHE);
         mGesture = new GestureDetector(context, this);
-        TypedArray a = context.obtainStyledAttributes(attributeSet, R.styleable.My3dView, defStyleAttr, 0);
-        mChildHeight = (int) a.getDimension(R.styleable.My3dView_childHeight, -1);
-        mChildWidth = (int) a.getDimension(R.styleable.My3dView_childWidth, -1);
-        mOvalWidth = (int) a.getDimension(R.styleable.My3dView_ovalWidth, -1);
-        mOvalHeight = (int) a.getDimension(R.styleable.My3dView_ovalHeight, -1);
+        TypedArray a = context.obtainStyledAttributes(attributeSet, R.styleable.My3dRotateView, defStyleAttr, 0);
+        mChildHeight = (int) a.getDimension(R.styleable.My3dRotateView_childHeight, -1);
+        mChildWidth = (int) a.getDimension(R.styleable.My3dRotateView_childWidth, -1);
+        mOvalWidth = (int) a.getDimension(R.styleable.My3dRotateView_ovalWidth, -1);
+        mOvalHeight = (int) a.getDimension(R.styleable.My3dRotateView_ovalHeight, -1);
         a.recycle();
     }
 
