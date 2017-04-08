@@ -25,11 +25,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("infoo","onItemClick position = "+position);
             }
         });
-        my3dView.setInterpolate(new My3dRotateView.My3dInterpolate() {
-            @Override
-            public double getInterpolation(float timing) {
-                return 2;
-            }
-        });
+
     }
 }

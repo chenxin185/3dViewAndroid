@@ -6,5 +6,7 @@
         <attr name="childWidth" format="dimension"/>
         <attr name="ovalHeight" format="dimension"/>
         <attr name="ovalWidth" format="dimension"/>
+        <attr name="margin_ovalWidth" format="dimension"/>
+        <attr name="margin_ovalHeight" format="dimension"></attr>
     </declare-styleable>
 </resources>

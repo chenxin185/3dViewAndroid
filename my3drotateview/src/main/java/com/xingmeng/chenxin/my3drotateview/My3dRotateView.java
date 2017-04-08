@@ -37,6 +37,8 @@ public class My3dRotateView extends ViewGroup implements View.OnTouchListener, G
     /**
      * 动画实际上就是围绕着椭圆的轨迹来旋转的。
      */
+    private int mOvalWidthMargin;//椭圆的宽距离父容器两边的宽度
+    private int mOvalHeightMargin;//椭圆的高距离父容器两边的长度
     private int mOvalWidth;//椭圆的宽度
     private int mOvalHeight;//椭圆的高度
     private View[] mChildrenView;//所有的子view
@@ -93,6 +95,8 @@ public class My3dRotateView extends ViewGroup implements View.OnTouchListener, G
         mChildWidth = (int) a.getDimension(R.styleable.My3dRotateView_childWidth, -1);
         mOvalWidth = (int) a.getDimension(R.styleable.My3dRotateView_ovalWidth, -1);
         mOvalHeight = (int) a.getDimension(R.styleable.My3dRotateView_ovalHeight, -1);
+        mOvalHeightMargin = (int) a.getDimension(R.styleable.My3dRotateView_margin_ovalHeight, -1);
+        mOvalWidthMargin = (int) a.getDimension(R.styleable.My3dRotateView_margin_ovalWidth, -1);
         a.recycle();
 
     }
@@ -102,7 +106,7 @@ public class My3dRotateView extends ViewGroup implements View.OnTouchListener, G
         //Log.e(TAG, "onLayout l = " + l + " t = " + t + " r = " + r + " b = " + b);
         if (flag) {
             //进行一些初始化的操作
-            if ((mOvalHeight == -1) || (mOvalWidth == -1)) {
+/*            if ((mOvalHeight == -1) || (mOvalWidth == -1)) {
                 if (mWidth > mHeight) {
                     mOvalHeight = (mHeight - 100) / 2;
                     mOvalWidth = mOvalHeight + 100;
@@ -110,10 +114,22 @@ public class My3dRotateView extends ViewGroup implements View.OnTouchListener, G
                     mOvalWidth = (mWidth - 100) / 2;
                     mOvalHeight = mOvalWidth + 100;
                 }
-            } else {
+            }else {
                 mOvalWidth /= 2;
                 mOvalHeight /= 2;
+            }*/
+
+            if (mOvalHeightMargin != -1) {
+                mOvalHeight = (mHeight - mOvalHeightMargin * 2) / 2;
+            } else if (mOvalHeight == -1) {
+                mOvalHeight = mHeight / 2;
             }
+            if (mOvalWidthMargin != -1) {
+                mOvalWidth = (mWidth - mOvalWidthMargin * 2) / 2;
+            } else if (mOvalWidth == -1) {
+                mOvalWidth = mWidth / 2;
+            }
+
 
             if ((mChildWidth == -1) && (mChildHeight == -1)) {
                 mChildWidth = 50;

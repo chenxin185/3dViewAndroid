@@ -12,13 +12,13 @@
     tools:context="com.xingmeng.chenxin.test3d.MainActivity">
 
     <com.xingmeng.chenxin.my3drotateview.My3dRotateView
-        app:childHeight="30dp"
-        app:childWidth="30dp"
-        app:ovalWidth="300dp"
-        app:ovalHeight="80dp"
         android:id="@+id/mView"
+        app:margin_ovalWidth="50dp"
+        app:margin_ovalHeight="100dp"
+        app:childHeight="50dp"
+        app:childWidth="50dp"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="300dp">
 
         <com.xingmeng.chenxin.test3d.XCRoundImageView
             android:clickable="true"
@@ -52,18 +52,4 @@
 
     </com.xingmeng.chenxin.my3drotateview.My3dRotateView>
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="开始" />
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/btn"
-        android:text="开始" />
 </RelativeLayout>
