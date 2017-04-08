@@ -12,43 +12,53 @@
             maven { url 'https://jitpack.io' }
         }
     }
+    然后app的build.gradle->dependencies中加入:
+        compile 'com.github.chenxin185:3dViewAndroid:1.0.2'
 ### 使用方法
-    在layout文件中声明：
-    <com.xingmeng.chenxin.my3drotateview.My3dRotateView
-        app:ovalHeight="150dp"
-        app:ovalWidth="400dp"
-        app:childWidth="60dp"
-        app:childHeight="60dp"
+#### 在layout文件中声明：
+     <com.xingmeng.chenxin.my3drotateview.My3dRotateView
+        android:id="@+id/mView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        >
+        android:layout_height="300dp"
+        app:childHeight="50dp"
+        app:childWidth="50dp"
+        app:margin_ovalHeight="100dp"
+        app:margin_ovalWidth="50dp">
+
         <ImageView
-            android:src="@mipmap/ic_launcher"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
         <ImageView
-            android:src="@mipmap/ic_launcher"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
         <ImageView
-            android:src="@mipmap/ic_launcher"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
         <ImageView
-            android:src="@mipmap/ic_launcher"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <ImageView
-            android:src="@mipmap/ic_launcher"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <ImageView
-            android:src="@mipmap/ic_launcher"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <ImageView
-            android:src="@mipmap/ic_launcher"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+        
     </com.xingmeng.chenxin.my3drotateview.My3dRotateView>
-    
+#### 在Activity中：
+        my3dView = (My3dRotateView) findViewById(R.id.mView);
+        //Item的点击事件
+        my3dView.setItemClickListener(new My3dRotateView.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position, boolean isFirst) {
+                Log.e("infoo","onItemClick position = "+position);
+            }
+        });
+        //自定义的插值器，返回的是每一帧改变的角度
+        my3dView.setInterpolate(new My3dRotateView.My3dInterpolate() {
+            @Override
+            public double getInterpolation(float timing) {
+                return 0;
+            }
+        });
