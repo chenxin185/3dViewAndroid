@@ -19,10 +19,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         my3dView = (My3dRotateView) findViewById(R.id.mView);
+        //Item的点击事件
         my3dView.setItemClickListener(new My3dRotateView.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position, boolean isFirst) {
                 Log.e("infoo","onItemClick position = "+position);
+            }
+        });
+        //自定义的插值器，返回的是每一帧改变的角度
+        my3dView.setInterpolate(new My3dRotateView.My3dInterpolate() {
+            @Override
+            public double getInterpolation(float timing) {
+                return 0;
             }
         });
 
