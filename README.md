@@ -74,3 +74,6 @@
      margin_ovalHeight：旋转轨迹的高度与父容器上下两边的margin，设置了这个属性，上面的ovalHeight无效</br>
      setItemClickListener（）：设置子view的点击事件</br>
      setInterpolate（）：设置速度插值器，来控制速度的变化</br>
+ ## end
+     希望大家可以关注下我的博客,一起学习一起进步哈：
+     [下课睡觉](http://my.csdn.net/qq_35071078)
