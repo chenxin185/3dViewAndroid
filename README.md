@@ -1,10 +1,9 @@
 # 3dViewAndroid
 ## note: 
     这是一个简易的可以旋转的自定义ViewGruop，可以自定义Interpolate来做变速旋转。
-## demo
-
-<imag src="https://github.com/chenxin185/3dViewAndroid/blob/master/gif/gif1.gif" width="200" height="360" />
-<imag src="https://github.com/chenxin185/3dViewAndroid/blob/master/gif/gif2.gif" width="200" height="360" />
+## demo，第一个是匀速的，第二个是变速的
+![image](https://github.com/chenxin185/3dViewAndroid/blob/master/gif/gif1.gif) 
+![image](https://github.com/chenxin185/3dViewAndroid/blob/master/gif/gif2.gif) 
 
 ## usage:
 ### 引用:
