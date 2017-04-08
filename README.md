@@ -65,3 +65,12 @@
                 return 0;
             }
         });
+ ### 属性和方法：
+     childHeight：子view的高度</br>
+     childWidth：子view的宽度</br>
+     ovalHeight：旋转轨迹的高度（旋转的轨迹就是一个椭圆，这里的宽高就是椭圆的宽高）</br>
+     ovalWidth：旋转轨迹的宽度</br>
+     margin_ovalWidth：旋转轨迹的宽度与父容器左右两边的margin，设置了这个属性，上面的ovalWidth无效</br>
+     margin_ovalHeight：旋转轨迹的高度与父容器上下两边的margin，设置了这个属性，上面的ovalHeight无效</br>
+     setItemClickListener（）：设置子view的点击事件</br>
+     setInterpolate（）：设置速度插值器，来控制速度的变化</br>
