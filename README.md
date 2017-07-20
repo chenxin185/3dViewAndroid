@@ -8,8 +8,6 @@
 ## usage:
 ### 引用:
     首先在项目的 build.gradle->allproject->repositories中加入:
-        maven { url 'https://jitpack.io' }
-        例子：
         allprojects {
             repositories {
             maven { url 'https://jitpack.io' }
